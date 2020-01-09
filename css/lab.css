@@ -1,0 +1,293 @@
+body, html {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #efefef; }
+  body *, html * {
+    box-sizing: border-box; }
+  body header, html header {
+    width: 100%;
+    height: auto;
+    background: -webkit-linear-gradient(135deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    -webkit-animation: backgroundPositionAnimation 15s ease infinite;
+            animation: backgroundPositionAnimation 15s ease infinite;
+    display: inline-block;
+    z-index: 9999; }
+    body header img, html header img {
+      height: 15rem;
+      display: block;
+      float: left; }
+    body header h1, html header h1 {
+      font-size: 3rem;
+      margin-top: 3.9rem;
+      margin-left: 3.5rem;
+      font-weight: 300;
+      float: left;
+      color: #fff; }
+      body header h1 bold, html header h1 bold {
+        font-weight: 500; }
+    body header nav, html header nav {
+      float: left;
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      clear: both;
+      position: relative;
+      background: rgba(51, 51, 51, 0.69);
+      padding: 0rem 1rem;
+      font-size: 1.5rem;
+      font-weight: 300; }
+      body header nav ul, html header nav ul {
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+        body header nav ul li, html header nav ul li {
+          padding: 1rem;
+          float: left;
+          color: #fff;
+          position: relative;
+          text-align: center;
+          background: rgba(0, 0, 0, 0);
+          -webkit-transition: ease-in-out all .3s;
+          transition: ease-in-out all .3s; }
+          body header nav ul li ul, html header nav ul li ul {
+            display: none;
+            width: 100%;
+            position: absolute;
+            top: 3.75rem;
+            left: 0;
+            background: rgba(0, 0, 0, 0.85); }
+            body header nav ul li ul li, html header nav ul li ul li {
+              float: none;
+              width: 100%;
+              position: relative; }
+              body header nav ul li ul li ul, html header nav ul li ul li ul {
+                display: none;
+                position: absolute;
+                width: inherit;
+                padding: 0;
+                margin-top: -3.75rem;
+                max-width: 1000px;
+                left: 100%; }
+          body header nav ul li:hover, html header nav ul li:hover {
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.44); }
+            body header nav ul li:hover ul, html header nav ul li:hover ul {
+              display: block; }
+              body header nav ul li:hover ul li ul, html header nav ul li:hover ul li ul {
+                display: none; }
+              body header nav ul li:hover ul li:hover ul, html header nav ul li:hover ul li:hover ul {
+                display: block; }
+  body main, html main {
+    padding: 2rem;
+    min-height: 75%;
+    color: #111;
+    background: #efefef;
+    -webkit-transition: ease-out 2s all;
+    transition: ease-out 2s all; }
+    body main a, html main a {
+      color: inherit; }
+      body main a:hover, html main a:hover {
+        color: #333; }
+    body main div.game-fields, html main div.game-fields {
+      position: relative;
+      display: inline-block;
+      background: #333;
+      color: #fff; }
+      body main div.game-fields div.video-background, html main div.game-fields div.video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        -webkit-transition: ease-out all 2s;
+        transition: ease-out all 2s;
+        z-index: 10; }
+        body main div.game-fields div.video-background video, html main div.game-fields div.video-background video {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+             object-fit: cover; }
+        body main div.game-fields div.video-background.fade-out, html main div.game-fields div.video-background.fade-out {
+          opacity: 0; }
+      body main div.game-fields div.game-menu-overlay, html main div.game-fields div.game-menu-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 132, 255, 0.5);
+        color: #fff;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+                justify-content: center;
+        z-index: 10000; }
+        body main div.game-fields div.game-menu-overlay div.game-menu-info, html main div.game-fields div.game-menu-overlay div.game-menu-info {
+          -webkit-align-self: center;
+                  align-self: center;
+          max-width: 50%;
+          -webkit-transition: ease-in-out all .5s;
+          transition: ease-in-out all .5s;
+          -webkit-transform: translate3d(0, 0, 0);
+                  transform: translate3d(0, 0, 0);
+          opacity: 1; }
+          body main div.game-fields div.game-menu-overlay div.game-menu-info p, html main div.game-fields div.game-menu-overlay div.game-menu-info p {
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 300; }
+          body main div.game-fields div.game-menu-overlay div.game-menu-info h2, html main div.game-fields div.game-menu-overlay div.game-menu-info h2 {
+            text-align: center;
+            width: 100%;
+            font-weight: 300;
+            font-size: 3rem; }
+          body main div.game-fields div.game-menu-overlay div.game-menu-info button, html main div.game-fields div.game-menu-overlay div.game-menu-info button {
+            background: transparent;
+            border: #fff 2px solid;
+            outline: none;
+            font-size: 2.3rem;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            width: 14rem;
+            margin: 6rem auto 0;
+            display: block;
+            font-weight: 300;
+            -webkit-transition: ease-in-out all .5s;
+            transition: ease-in-out all .5s; }
+            body main div.game-fields div.game-menu-overlay div.game-menu-info button:hover, html main div.game-fields div.game-menu-overlay div.game-menu-info button:hover {
+              background: #fff;
+              color: #333;
+              cursor: pointer; }
+        body main div.game-fields div.game-menu-overlay.fade-out, html main div.game-fields div.game-menu-overlay.fade-out {
+          -webkit-transition: ease-in-out all 2s;
+          transition: ease-in-out all 2s;
+          background: rgba(0, 132, 255, 0); }
+          body main div.game-fields div.game-menu-overlay.fade-out div.game-menu-info, html main div.game-fields div.game-menu-overlay.fade-out div.game-menu-info {
+            -webkit-transition: ease-in-out all .5s;
+            transition: ease-in-out all .5s;
+            -webkit-transform: translate3d(0, -200%, 0);
+                    transform: translate3d(0, -200%, 0);
+            opacity: 0; }
+      body main div.game-fields div[class^='game-field-'], html main div.game-fields div[class^='game-field-'] {
+        float: left;
+        width: 50%;
+        padding: 0rem;
+        opacity: 0;
+        -webkit-transition: ease-in opacity .5s;
+        transition: ease-in opacity .5s; }
+        body main div.game-fields div[class^='game-field-']:nth-child(1), html main div.game-fields div[class^='game-field-']:nth-child(1) {
+          padding-right: 0.5rem; }
+        body main div.game-fields div[class^='game-field-']:nth-child(2), html main div.game-fields div[class^='game-field-']:nth-child(2) {
+          padding-left: 0.5rem; }
+        body main div.game-fields div[class^='game-field-'] canvas.game-field-canvas, html main div.game-fields div[class^='game-field-'] canvas.game-field-canvas {
+          margin: 1rem;
+          background: #333;
+          display: block;
+          width: calc(100% - 2rem);
+          height: 45vw; }
+        body main div.game-fields div[class^='game-field-'] h2, html main div.game-fields div[class^='game-field-'] h2 {
+          padding-left: 1rem;
+          text-transform: uppercase;
+          font-weight: 300; }
+      body main div.game-fields div.message-box, html main div.game-fields div.message-box {
+        float: left;
+        width: 100%;
+        padding: 0rem;
+        opacity: 0;
+        -webkit-transition: ease-in .5s all;
+        transition: ease-in .5s all;
+        padding: 0 1rem 1rem;
+        height: 4.25rem;
+        position: relative; }
+        body main div.game-fields div.message-box div, html main div.game-fields div.message-box div {
+          position: absolute;
+          top: 0;
+          left: 1rem;
+          right: 1rem;
+          padding: 1rem;
+          -webkit-transition: ease-in-out .3s all;
+          transition: ease-in-out .3s all;
+          font-size: 1rem; }
+        body main div.game-fields div.message-box button, html main div.game-fields div.message-box button {
+          position: absolute;
+          top: 0;
+          right: 1rem;
+          padding: 0.875rem 1rem;
+          border: 0;
+          outline: 0;
+          font-size: 1.25rem;
+          z-index: 999;
+          text-transform: uppercase;
+          background: rgba(0, 0, 0, 0.3);
+          color: #fff;
+          -webkit-transition: ease-in-out .3s all;
+          transition: ease-in-out .3s all; }
+          body main div.game-fields div.message-box button:hover, html main div.game-fields div.message-box button:hover {
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.5); }
+        body main div.game-fields div.message-box div.warning-msg, html main div.game-fields div.message-box div.warning-msg {
+          background: #ffd000;
+          color: #333;
+          padding: 1rem;
+          opacity: 0;
+          z-index: 100; }
+        body main div.game-fields div.message-box div.info-msg, html main div.game-fields div.message-box div.info-msg {
+          background: #00bb19;
+          color: #333; }
+    body main.game-active article, html main.game-active article {
+      opacity: 0; }
+  body footer, html footer {
+    padding: 2rem;
+    background: #333;
+    text-align: center;
+    color: #fff; }
+
+@-webkit-keyframes rolloutDropdown {
+  0% {
+    overflow-y: hidden;
+    max-height: 0px; }
+  99% {
+    overflow-y: hidden;
+    max-height: 10000px; }
+  100% {
+    overflow-y: visible;
+    max-height: 0px; } }
+
+@keyframes rolloutDropdown {
+  0% {
+    overflow-y: hidden;
+    max-height: 0px; }
+  99% {
+    overflow-y: hidden;
+    max-height: 10000px; }
+  100% {
+    overflow-y: visible;
+    max-height: 0px; } }
+
+@-webkit-keyframes backgroundPositionAnimation {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes backgroundPositionAnimation {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
